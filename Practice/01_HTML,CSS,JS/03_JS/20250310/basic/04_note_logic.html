@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let note;
+      let date = new Date();
+      let month = date.getMonth() + 1; // 월 반환 값 0~11 + 1
+
+      if (3 <= month && month <= 5) {
+        note = '봄입니다.';
+      } else if (6 <= month && month <= 8) {
+        note = '여름입니다.';
+      } else if (9 <= month && month <= 11) {
+        note = '가을입니다.';
+      } else {
+        note = '겨울입니다.';
+      }
+
+      alert(note);
+    </script>
+  </head>
+  <body></body>
+</html>

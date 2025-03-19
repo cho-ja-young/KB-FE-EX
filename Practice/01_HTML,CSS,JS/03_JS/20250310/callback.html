@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback</title>
+  </head>
+  <body>
+    <script>
+      // 정의
+      function delayFn(ms, callback) {
+        // 매개변수 callback :
+        // delayFn() 함수 내에서 나중에 실행할 함수
+
+        console.log('delayFn() 함수 호출됨');
+        setTimeout(callback, ms);
+      }
+
+      // 함수 호출
+      delayFn(3000, function () {
+        console.log('3초 후 실행');
+      });
+    </script>
+  </body>
+</html>

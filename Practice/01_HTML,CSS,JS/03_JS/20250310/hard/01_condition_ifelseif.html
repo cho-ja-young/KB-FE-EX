@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let note;
+      let date = new Date();
+      let time = date.getHours();
+
+      if (time < 5) {
+        note = '잠을 자렴...';
+      } else if (time < 7) {
+        note = '준비';
+      } else if (time < 9) {
+        note = '출근';
+      } else if (time < 12) {
+        note = '빈둥 빈둥';
+      } else if (time < 14) {
+        note = '식사';
+      } else {
+        note = '여러 가지 업무를 수행합니다.';
+      }
+
+      alert(note);
+    </script>
+  </head>
+  <body></body>
+</html>
