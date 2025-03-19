@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Basic</title>
+    <script>
+      window.onload = function () {
+        // querySelectorAll -> NodeList 반환
+        // FOR, FOR OF, FOR RACH() 사용 가능
+        let headers = document.querySelectorAll('h1');
+
+        for (let i = 0; i < headers.length; i++) {
+          let header = headers[i];
+
+          header.style.color = 'orange';
+          header.style.background = 'red';
+          header.innerHTML = 'From JavaScript';
+        }
+
+        /*
+        for (let el of list) {
+        // h1 요소들 하나씩 순회
+        }*/
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+  </body>
+</html>

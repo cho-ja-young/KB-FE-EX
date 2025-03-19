@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let button = document.getElementById('btn');
+
+        button.onclick = function () {
+          const query = 'input[name="food"]:checked';
+          const selectedEls = document.querySelectorAll(query);
+
+          let foodChecked = ''
+          selectedEls.forEach(element => {
+            foodChecked += element.value + ' ';
+          });
+
+          /*
+          for (let b of boxs)  {
+            results.push(b.value)
+          }
+          */
+          console.log(foodChecked);
+        };
+
+        /* 
+        // #btn 요소가 'click'된 것이 감지 되었을때
+        btn.addEventListener('click', () => {
+        // 감지되는 시점에 checkbox 모두 얻어오기
+        // CSS 기본 속성 선택자 : [속성명:속성값]
+        const boxs = document.queryselectorAll('[name=food]');
+
+        const results = []; // 비어있는 배열 생성
+        // 체크된 체크박스의 value를 누적
+
+        // boxs 에 저장된 요소 순회 탐색
+        for(let b of boxs) {
+          // 현재 접근한 체크박스(b) 가 체크 되었는지 확인
+          // 체크박스.checked : 체크된 상태면 true, 아니면 false 반환
+          if (b.checked === true) {
+            // 체크된 체크박스의 value 속성 값을 results 배열에 추가
+            results.push(b.value);
+          }
+        }
+          console.log('result: ' + results)
+        });
+        */
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <div>
+      좋아하는 음식은? <br>
+      <label><input type="checkbox" name="food" value="라면">라면</label>
+      <label><input type="checkbox" name="food" value="만두">만두</label>
+      <label><input type="checkbox" name="food" value="불고기">불고기</label>
+      <input id="btn" type="button" value="전송">
+    </form>
+  </body>
+</html>
