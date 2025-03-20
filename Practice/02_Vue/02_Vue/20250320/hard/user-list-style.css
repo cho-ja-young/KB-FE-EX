@@ -1,0 +1,26 @@
+body {
+  font-family: '맑은 고딕', sans-serif;
+  margin: 20px;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.user-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
