@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-01</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 보간법 == v-text -->
+      <h2>{{message}}</h2>
+
+      <!-- v-text -->
+
+      <!-- v-html -->
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      // model (데이터)
+      var model = { message: '<h2>Hello Vue3!</h2>' };
+      // view model
+      // (vue 인스턴스 == 애플리케이션 인스턴스 == 루트 컴포넌트 익스)
+      var vm = Vue.createApp({
+        name: 'App',
+
+        data() {
+          // 데이터 옵션
+
+          return {};
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

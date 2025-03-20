@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sticky</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header > div {
+        height: 200px;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      header > div:first-child {
+        background-color: skyblue;
+      }
+
+      header > div:last-child {
+        background-color: hotpink;
+      }
+
+      main {
+        text-align: center;
+      }
+
+      header {
+        position: sticky;
+        top: -200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>숨겨질 영역</div>
+      <div>고정될 영역</div>
+    </header>
+
+    <h1>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, eaque.
+    </h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, aliquam!
+      Fuga, ad ducimus atque iure assumenda alias, facere veritatis, magnam odio
+      velit itaque? Suscipit corporis commodi voluptatem ipsa, optio excepturi
+      iste laborum quasi unde tempora? Eaque voluptatum omnis provident
+      reprehenderit? Nam nostrum, necessitatibus ea dolore deleniti quo, dicta
+      eligendi eius porro voluptates ipsam mollitia minima, ipsa explicabo
+      dolorum laboriosam! Fugit perferendis provident accusantium dolores,
+      laboriosam quibusdam? Nisi cum libero explicabo vel dolorem laboriosam
+      dolor atque odit saepe non nam aperiam sint laudantium a doloremque
+      sapiente, impedit vero perspiciatis ab? Numquam, odio inventore? Veritatis
+      libero sequi assumenda provident nostrum dolor facere.
+    </p>
+
+    <main>
+      <img src="https://placehold.co/600x600" alt="" />
+    </main>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, aliquam!
+      Fuga, ad ducimus atque iure assumenda alias, facere veritatis, magnam odio
+      velit itaque? Suscipit corporis commodi voluptatem ipsa, optio excepturi
+      iste laborum quasi unde tempora? Eaque voluptatum omnis provident
+      reprehenderit? Nam nostrum, necessitatibus ea dolore deleniti quo, dicta
+      eligendi eius porro voluptates ipsam mollitia minima, ipsa explicabo
+      dolorum laboriosam! Fugit perferendis provident accusantium dolores,
+      laboriosam quibusdam? Nisi cum libero explicabo vel dolorem laboriosam
+      dolor atque odit saepe non nam aperiam sint laudantium a doloremque
+      sapiente, impedit vero perspiciatis ab? Numquam, odio inventore? Veritatis
+      libero sequi assumenda provident nostrum dolor facere.
+    </p>
+  </body>
+</html>
