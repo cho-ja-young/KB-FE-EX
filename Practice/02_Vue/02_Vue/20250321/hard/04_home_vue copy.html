@@ -105,10 +105,10 @@
         </thead>
         <tbody>
           <tr v-for="con in contents" :key="con.no">
-            <td>{{con.no}}</td>
-            <td><a href="#">{{con.title}}</a></td>
-            <td>{{con.writer}}</td>
-            <td>{{con.enrollDate}}</td>
+            <td>{{ con.no }}</td>
+            <td><a href="#">{{ con.title }}</a></td>
+            <td>{{ con.writer }}</td>
+            <td>{{ con.enrollDate }}</td>
           </tr>
         </tbody>
       </table>
@@ -132,8 +132,7 @@
             <li
               class="page-item"
               v-for="n in 3"
-              :key="index"
-              v-bind:class="currentPage === n ? 'active' : ''"
+              v-bind:class="currentPage===n ? 'active' '' "
               @click.prevent="changePage(n)"
               :key="n"
             >
@@ -175,25 +174,23 @@
       const vm = Vue.createApp({
         name: 'App',
         data() {
-          // currentPage == 현재 페이지
+          // currentPage ==  현재 페이지
           return { currentPage: 1 };
         },
         methods: {
           changePage(pageNum) {
-            // data에 작성된 currentPage에
-            // 클릭 시 전달된 pageNum을 대입
+            // data에 작성된 currentPage 에
+            // 클릭시 전달된 pageNum 을 대입
             this.currentPage = pageNum;
           },
         },
 
         computed: {
           // computed : data 변경 시 자동으로 계산을 수행하는 옵션
-          // 함수명(contents): 함수 반환 값 형태로 vue 인스턴스에 등록
-          // -> mount된 요소 내에서 {{함수명}}, v-html="함수명"
-          //     형태로 사용 가능
+          // 함수명(contents) : 함수 반환값 형태로 vue 인스턴스에 등록
+          // -> mount 된 요소 내에서 {{함수명}}, v-html="함수명" 형태로 사용이 가능해진다
           contents() {
             const arr = []; // 빈 배열 생성
-
             const size = 30; // 게시글 개수
 
             const start = size - (this.currentPage - 1) * 10;
@@ -203,7 +200,7 @@
               arr.push({
                 no: i,
                 title: `글 제목 ${i}`,
-                writer: `user ${i}`,
+                writer: 'user01',
                 enrollDate: '2025-03-21',
               });
             }
