@@ -3,6 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>TodoList</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstrap css -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -59,6 +69,8 @@
               </div>
             </div>
           </div>
+          <!-- 개수 세기 -->
+
           <!-- 할 일 목록-->
           <div class="row">
             <div class="col">
@@ -80,6 +92,9 @@
                   >
                     {{todoitem.todo}} {{todoitem.completed ? "(완료)" : ""}}
                   </span>
+
+                  <!-- 삭제 버튼이 클릭된 경우 deleteTdo() 메서드 호출
+                   .stop : 이벤트 전파 (하위요소 -> 상위요소) 막기-->
                   <span
                     class="float-end badge bg-secondary pointer"
                     @click.stop="deleteTodo(todoitem.id)"
@@ -111,6 +126,13 @@
           };
         },
         computed: {
+          // 완료 개수 카운트
+          completedCount() {
+            // todolist 의 요소 중 completed가 true 인 요소만 남긴 배열
+            return this.todolist.filter((todo) => todo.completed).length;
+          },
+
+          //  정렬
           sortedTodolist() {
             return this.todolist.slice().sort((a, b) => {
               if (a.completed !== b.completed) {
@@ -131,7 +153,7 @@
               this.todo = '';
             }
           },
-          //
+          // 할 일 삭제 메서드
           deleteTodo(id) {
             let index = this.todolist.findIndex((item) => id === item.id);
             this.todolist.splice(index, 1);
