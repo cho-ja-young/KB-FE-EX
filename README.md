@@ -8,6 +8,7 @@ KB IT'S YOUR LIFE 6기 FE 실습 레포입니다.
 2. CSS
 3. JS
 4. Vue
+5. bootstrap
 
 ## FE 실습 제출
 
