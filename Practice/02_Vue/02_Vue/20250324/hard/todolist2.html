@@ -41,6 +41,16 @@
       .pointer {
         cursor: pointer;
       }
+      /* 개수 부분 추가 */
+      .completed {
+        color: green;
+        font-weight: bold;
+      }
+
+      .notCompleted {
+        color: red;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -70,7 +80,24 @@
             </div>
           </div>
           <!-- 개수 세기 -->
-
+          <div class="row mb-3">
+            <div class="col-md text-center">
+              전체 todo 개수 : <span>{{todolist.length}}</span>
+            </div>
+            <div class="col-md text-center">
+              완료 todo 개수 :
+              <span :class="{'completed' : (completedCount > 0)}"
+                >{{completedCount}}</span
+              >
+            </div>
+            <div class="col-md text-center">
+              미완료 todo 개수 :
+              <span
+                :class="{'notCompleted' : (todolist.length - completedCount > 0)}"
+                >{{todolist.length - completedCount}}</span
+              >
+            </div>
+          </div>
           <!-- 할 일 목록-->
           <div class="row">
             <div class="col">
