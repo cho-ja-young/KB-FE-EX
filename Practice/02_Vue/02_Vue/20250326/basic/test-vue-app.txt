@@ -1,4 +1,5 @@
 Study\02_Vue\02_Vue\ch08 에서 작업
+https://github.com/cho-ja-young/KB-FE-EX/tree/main/Study/02_Vue/02_Vue/ch08
 
 - style-test
 - slot-test
