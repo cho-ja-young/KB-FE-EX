@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>최신 인기곡</h2>
-    <SongList></SongList>
+    <SongList :songs="songs"></SongList>
   </div>
 </template>
 

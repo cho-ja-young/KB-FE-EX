@@ -4,6 +4,7 @@
     {{ song.title }}
   </li>
 </template>
+
 <script>
 export default {
   name: 'SongListItem',
