@@ -1,0 +1,4 @@
+basic/router-test 에 404 관련 심화 예제 추가했습니다.
+
+- src/pages/NotFound.vue
+- src/router/index.js
