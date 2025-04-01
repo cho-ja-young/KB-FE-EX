@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+}
+
+.grid-item {
+  color: white;
+  background-color: #ff5252;
+}
+.grid-item:nth-child(2n) {
+  background-color: #bf5e5e;
+}
+
+.grid-item:nth-child(3n) {
+  background-color: #be96e4;
+}
+
+.grid-item:nth-child(4n) {
+  background-color: #9ba1ff;
+}
