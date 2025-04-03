@@ -4,13 +4,13 @@
       "id": "1",
       "todo": "야구장",
       "desc": "프로야구 경기도 봐야합니다.",
-      "done": false
+      "done": true
     },
     {
       "id": "2",
       "todo": "놀기",
       "desc": "노는 것도 중요합니다.",
-      "done": false
+      "done": true
     },
     {
       "id": "3",
@@ -25,9 +25,9 @@
       "done": false
     },
     {
-      "id": "58d5",
-      "todo": "스터디",
-      "desc": "발표 스터디 참여하기",
+      "id": "28d0",
+      "todo": "발표 스터디",
+      "desc": "공부한 내용을 발표",
       "done": false
     }
   ]
