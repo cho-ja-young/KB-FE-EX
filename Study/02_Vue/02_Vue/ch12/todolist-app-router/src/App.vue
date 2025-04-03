@@ -1,13 +1,8 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router';
-import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
   <!-- 전체 컨테이너를 감싸는 div -->
   <div class="container">
     <!-- 헤더 컴포넌트를 표시 -->
-    <Header />
+    <Header></Header>
 
     <!-- 라우터에 의해 매칭되는 컴포넌트를 표시하는 영역 -->
     <!-- 클릭된 RouterLink에 따라 표시되는 컴포넌트가 변경됨 -->
@@ -28,7 +23,8 @@ import axios from 'axios';
 const BASEURI = '/api/todos';
 
 // 상태 변수를 reactive로 선언하여 반응형으로 만듦
-const states = reactive({ todoList: [] });
+// const states = reactive({ todoList: [] });
+const states = reactive({ todoList: [], isLoading: false });
 
 /********* axios 요청 처리 함수 *********/
 
