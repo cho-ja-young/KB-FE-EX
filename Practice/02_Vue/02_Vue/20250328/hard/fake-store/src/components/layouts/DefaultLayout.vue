@@ -1,8 +1,16 @@
 <template>
-  <div>
-    <h2>
-      <slot>기본 페이지</slot>
-    </h2>
+  <div class="container">
+    <slot name="header"></slot>
+    <slot name="navbar"></slot>
+  </div>
+
+  <div class="content my-5 px-3">
+    <!-- v-slot:default -->
+    <slot></slot>
+  </div>
+
+  <div class="footer">
+    <slot name="footer"></slot>
   </div>
 </template>
 

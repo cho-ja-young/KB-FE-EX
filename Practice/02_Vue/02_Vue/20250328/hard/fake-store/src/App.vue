@@ -1,12 +1,21 @@
 <template>
+  <h2>안녕</h2>
   <DefaultLayout>
+    <!-- Header slot 에 Header 컴포넌트 끼워넣기 -->
     <template v-slot:header><Header></Header></template>
+
+    <!-- Navbar slot 에 Navbar 컴포넌트 끼워넣기 -->
     <template v-slot:navbar><NavBar></NavBar></template>
+
+    <!-- <slot>에 라우트된 페이지 끼워넣기 -->
     <template v-slot:default
-      ><router-view class="mt-5 ms-3"></router-view
+      ><RouterView class="mt-5 ms-3"></RouterView
     ></template>
+
+    <!-- Footer slot 에 Footer 컴포넌트 끼워넣기 -->
     <template v-slot:footer><Footer></Footer></template>
   </DefaultLayout>
+  <h2>잘가</h2>
 </template>
 
 <script setup>
