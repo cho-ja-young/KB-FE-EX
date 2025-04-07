@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { useCounterStore } from '@/stores/counter.js';
 
 const store = useCounterStore();
@@ -13,4 +13,4 @@ console.log(store);
 <template>
   {{ store.count }}/{{ store.doubleCount }} <br />
   {{ count }}
-</template>
+</template> -->
